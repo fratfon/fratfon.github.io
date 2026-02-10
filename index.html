@@ -18,10 +18,29 @@
             text-align: center;
         }
 
+        /* Header */
         header {
             background-color: #000000;
             color: white;
-            padding: 40px 20px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Hamburger icon */
+        .hamburger {
+            position: absolute;
+            left: 20px;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 5px 0;
         }
 
         header h1 {
@@ -30,16 +49,34 @@
         }
 
         /* Dropdown menu */
-        nav {
+        .menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
             background: #111;
-            padding: 10px;
+            width: 200px;
+            display: none;
+            flex-direction: column;
+            text-align: left;
+            z-index: 5;
         }
 
-        select {
-            padding: 8px;
+        .menu button {
+            background: none;
+            border: none;
+            color: white;
+            padding: 15px 20px;
+            text-align: left;
             font-size: 1em;
+            cursor: pointer;
+            width: 100%;
         }
 
+        .menu button:hover {
+            background: #222;
+        }
+
+        /* Logo */
         .logo {
             margin: 20px 0;
             width: 200px;
@@ -79,21 +116,25 @@
 <body>
 
     <header>
-        <h1>FRATFON</h1>
-    </header>
+        <!-- Hamburger -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
 
-    <!-- Dropdown navigation -->
-    <nav>
-        <select onchange="changePage(this.value)">
-            <option value="home">Home</option>
-            <option value="about">About Us</option>
-        </select>
-    </nav>
+        <h1>FRATFON</h1>
+
+        <!-- Menu -->
+        <div id="menu" class="menu">
+            <button onclick="changePage('home')">Home</button>
+            <button onclick="changePage('about')">About Us</button>
+        </div>
+    </header>
 
     <img src="fratfon logo.png" alt="Company Logo" class="logo">
 
     <main>
-        <!-- Home page -->
         <div id="home" class="page active">
             <p>Welcome to Fratfon! We specialize in providing high-quality products, made to the highest standards.</p>
 
@@ -102,11 +143,8 @@
             <p>In just a short time, Fratfon has emerged as a leader in its field, earning recognition for innovation, quality, and reliability.</p>
         </div>
 
-        <!-- About Us page -->
         <div id="about" class="page">
-            <p>
-                Fratfon has been committed to creating quality products and outstanding customer service since our beginning in 2023.
-            </p>
+            <p>Fratfon has veen dedicated to quality and great customer service since its creation in 2023. From our humble beginnings, we have quickly risen to success.</p>
         </div>
     </main>
 
@@ -115,12 +153,18 @@
     </footer>
 
     <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+        }
+
         function changePage(pageId) {
             document.querySelectorAll('.page').forEach(page => {
                 page.classList.remove('active');
             });
 
             document.getElementById(pageId).classList.add('active');
+            document.getElementById("menu").style.display = "none";
         }
     </script>
 
