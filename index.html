@@ -17,11 +17,11 @@
             background-color: #ffffff;
             color: #333;
             line-height: 1.6;
-            text-align: center; /* Center everything by default */
+            text-align: center;
         }
 
         header {
-            background-color: #000000; /* Company-themed color */
+            background-color: #000000;
             color: white;
             padding: 40px 20px;
         }
@@ -34,20 +34,38 @@
         /* Logo between header and main body */
         .logo {
             margin: 20px 0;
-            width: 200px; /* Adjust size as needed */
+            width: 200px;
             height: auto;
         }
 
         main {
             max-width: 800px;
             margin: 0 auto 40px auto;
-            padding: 0 20px;
-            text-align: left; /* Body text aligned left */
+            padding: 0 20px 80px; /* space for footer */
+            text-align: left;
         }
 
         p {
             font-size: 1.1em;
             margin-bottom: 1em;
+        }
+
+        /* Footer */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+
+            background-color: #000000;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -68,5 +86,10 @@
 
         <p>In just a short time, Fratfon has emerged as a leader in its field, earning recognition for innovation, quality, and reliability. Through a combination of forward-thinking strategies and an unwavering commitment to excellence, the company has quickly set itself apart from competitors. Customers and industry experts alike have taken notice, and Fratfon’s reputation continues to grow as it defines the standard for what success looks like in its market.</p>
     </main>
+
+    <!-- Footer -->
+    <footer>
+        Contact us at fratfonco@gmail.com!
+    </footer>
 </body>
 </html>
