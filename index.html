@@ -111,6 +111,25 @@
             justify-content: center;
             font-size: 0.9em;
         }
+        .review {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            background: #fafafa;
+        }
+        .stars {
+            color: #f5b301; /* gold */
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .review-text {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .reviewer {
+            font-weight: bold;
+            text-align: right;
+        }
     </style>
 </head>
 <body>
@@ -129,6 +148,7 @@
         <div id="menu" class="menu">
             <button onclick="changePage('home')">Home</button>
             <button onclick="changePage('about')">About Us</button>
+            <button onclick="changePage('reviews')">Reviews</button>
         </div>
     </header>
 
@@ -144,7 +164,35 @@
         </div>
 
         <div id="about" class="page">
-            <p>Fratfon has veen dedicated to quality and great customer service since its creation in 2023. From our humble beginnings, we have quickly risen to success.</p>
+            <p>About Our Company</p>
+            <p>Fratfon has been dedicated to quality and great customer service since its creation in 2023. From our humble beginnings, we have quickly risen to success.</p>
+        </div>
+
+        <div id="reviews" class="page>
+            <div class="review">
+            <div class="stars">
+                ★★★★★
+            </div>
+            
+            <p class="review-text">
+                Love these products! I come back to Fratfon again and again.
+            </p>
+            <div class="reviewer">
+                — FratfonLovr
+            </div>
+        </div>
+        <div class="review">
+            <div class="stars">
+                ★★★★☆
+            </div>
+            
+            <p class="review-text">
+                Pretty good! I'm satisfied.
+            </p>
+            <div class="reviewer">
+                — Customer
+            </div>
+        </div>
         </div>
     </main>
 
