@@ -18,7 +18,6 @@
             text-align: center;
         }
 
-        /* Header */
         header {
             background-color: #000000;
             color: white;
@@ -29,7 +28,6 @@
             position: relative;
         }
 
-        /* Hamburger icon */
         .hamburger {
             position: absolute;
             left: 20px;
@@ -48,7 +46,6 @@
             font-size: 2.5em;
         }
 
-        /* Dropdown menu */
         .menu {
             position: absolute;
             top: 100%;
@@ -76,7 +73,6 @@
             background: #222;
         }
 
-        /* Logo */
         .logo {
             margin: 20px 0;
             width: 200px;
@@ -111,21 +107,25 @@
             justify-content: center;
             font-size: 0.9em;
         }
+
         .review {
             border: 1px solid #ddd;
             padding: 20px;
             margin: 20px 0;
             background: #fafafa;
         }
+
         .stars {
-            color: #f5b301; /* gold */
+            color: #f5b301;
             font-size: 1.2em;
             margin-bottom: 10px;
         }
+
         .review-text {
             font-style: italic;
             margin-bottom: 10px;
         }
+
         .reviewer {
             font-weight: bold;
             text-align: right;
@@ -134,87 +134,74 @@
 </head>
 <body>
 
-    <header>
-        <!-- Hamburger -->
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+<header>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
 
-        <h1>FRATFON</h1>
+    <h1>FRATFON</h1>
 
-        <!-- Menu -->
-        <div id="menu" class="menu">
-            <button onclick="changePage('home')">Home</button>
-            <button onclick="changePage('about')">About Us</button>
-            <button onclick="changePage('reviews')">Reviews</button>
-        </div>
-    </header>
+    <div id="menu" class="menu">
+        <button onclick="changePage('home')">Home</button>
+        <button onclick="changePage('about')">About Us</button>
+        <button onclick="changePage('reviews')">Reviews</button>
+    </div>
+</header>
 
-    <img src="fratfon logo.png" alt="Company Logo" class="logo">
+<img src="fratfon logo.png" alt="Company Logo" class="logo">
 
-    <main>
-        <div id="home" class="page active">
-            <p>Welcome to Fratfon! We specialize in providing high-quality products, made to the highest standards.</p>
+<main>
+    <div id="home" class="page active">
+        <p>Welcome to Fratfon! We specialize in providing high-quality products, made to the highest standards.</p>
+        <p>At Fratfon, we take pride in delivering products that set the standard for excellence.</p>
+        <p>Fratfon has emerged as a leader in its field through innovation and reliability.</p>
+    </div>
 
-            <p>At Fratfon, we take pride in delivering products that set the standard for excellence. Every item is crafted with meticulous attention to detail, combining innovation with timeless quality.</p>
+    <div id="about" class="page">
+        <p>About Our Company</p>
+        <p>Fratfon has been dedicated to quality and customer service since 2023.</p>
+    </div>
 
-            <p>In just a short time, Fratfon has emerged as a leader in its field, earning recognition for innovation, quality, and reliability.</p>
-        </div>
-
-        <div id="about" class="page">
-            <p>About Our Company</p>
-            <p>Fratfon has been dedicated to quality and great customer service since its creation in 2023. From our humble beginnings, we have quickly risen to success.</p>
-        </div>
-
-        <div id="reviews" class="page>
-            <div class="review">
-            <div class="stars">
-                ★★★★★
-            </div>
-            
+    <div id="reviews" class="page">
+        <div class="review">
+            <div class="stars">★★★★★</div>
             <p class="review-text">
                 Love these products! I come back to Fratfon again and again.
             </p>
-            <div class="reviewer">
-                — FratfonLovr
-            </div>
+            <div class="reviewer">— FratfonLovr</div>
         </div>
+
         <div class="review">
-            <div class="stars">
-                ★★★★☆
-            </div>
-            
+            <div class="stars">★★★★☆</div>
             <p class="review-text">
                 Pretty good! I'm satisfied.
             </p>
-            <div class="reviewer">
-                — Customer
-            </div>
+            <div class="reviewer">— Customer</div>
         </div>
-        </div>
-    </main>
+    </div>
+</main>
 
-    <footer>
-        Contact us at fratfonco@gmail.com!
-    </footer>
+<footer>
+    Contact us at fratfonco@gmail.com!
+</footer>
 
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById("menu");
-            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-        }
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById("menu");
+        menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    }
 
-        function changePage(pageId) {
-            document.querySelectorAll('.page').forEach(page => {
-                page.classList.remove('active');
-            });
+    function changePage(pageId) {
+        document.querySelectorAll('.page').forEach(page => {
+            page.classList.remove('active');
+        });
 
-            document.getElementById(pageId).classList.add('active');
-            document.getElementById("menu").style.display = "none";
-        }
-    </script>
+        document.getElementById(pageId).classList.add('active');
+        document.getElementById("menu").style.display = "none";
+    }
+</script>
 
 </body>
 </html>
